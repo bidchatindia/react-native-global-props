@@ -14,7 +14,7 @@ export const setCustomText = customProps => {
         defaultPropsOverride[k] = v;
       }
     });
-    this.props = { ...customProps, ...this.props, ...defaultPropsOverride, style: [customProps.style, this.props.style] };
+    this.props = { ...customProps, ...this.props, ...defaultPropsOverride, style: [customProps.style, this.props.style], allowFontScaling: false };
     try {
       return textRender.apply(this, arguments);
     } finally {
